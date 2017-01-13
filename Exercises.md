@@ -20,7 +20,7 @@ awk 'BEGIN {max = 0} {if ($1 > max) max =$1} END {print max}' num.dat
 awk '{print $1-prev;prev=$1}' num.dat 
 ```
 
-##### Exercise 3
+##### Exercise 01 Simple arthemetics
 ```
 ## cheap solution
 awk '{print $1+$NF,$0}' task2.dat
@@ -45,4 +45,15 @@ awk_seminar$] awk '{print $1,$2+1,$3}' coord.dat
 awk '{print 1.8897*$1,1.8997*$2,1.8897*$3}' coord.dat 
  
 awk 'BEGIN {fac = 1.189} {print fac*$1,fac*$2,1.fac*$3}' coord.dat 
+```
+
+
+##### Exercise 02 Data extraction
+ ```
+## Write an Awk script to collect the "MD temperature" in one column vs the "Md step" i.e.
+$ awk '/MD step/{step= $3} /MD Temperature:/ {print step, $5 }' md. out
+
+## Can you tabulate all values against the "MD step"
+awk '/MD step/{step= $3; getline; press= $4; getline; pe= $5; getline; ke= $6; getline; te= $6; getline; t=$5; print step,press,pe,ke,te,t} ' Md.out 
+awk 'BEGIN {RS=" K\n"} {print $3, $7, $13, $20, $27, $33}' md.out
 ```
