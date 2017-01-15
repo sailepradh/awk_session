@@ -16,7 +16,7 @@ awk 'BEGIN {max = 0} {if ($1 > max) max =$1} END {print max}' num.dat
 ```awk
 awk '{print $1-prev;prev=$1}' num.dat 
 ```
-##### Exercise 01 Simple arthemetics
+##### Exercise 01 [Simple arthemetics] (https://sites.google.com/site/toawkornot/exercises/-simple-arithmetic)
 ```awk
 ## cheap solution
 awk '{print $1+$NF,$0}' task2.dat
@@ -38,7 +38,7 @@ awk 'BEGIN {fac = 1.189} {print fac*$1,fac*$2,1.fac*$3}' coord.dat
 ```
 
 
-##### Exercise 02 Data extraction
+##### Exercise 02 [Data extraction] (https://sites.google.com/site/toawkornot/exercises/-data-extraction)
  ``` awk
 ## Write an Awk script to collect the "MD temperature" in one column vs the "Md step" i.e.
 $ awk '/MD step/{step= $3} /MD Temperature:/ {print step, $5 }' md. out
@@ -48,7 +48,7 @@ awk '/MD step/{step= $3; getline; press= $4; getline; pe= $5; getline; ke= $6; g
 awk 'BEGIN {RS=" K\n"} {print $3, $7, $13, $20, $27, $33}' md.out
 
 ```
-##### Exercise 03 Data extraction
+##### Exercise 03 [Data extraction] (https://sites.google.com/site/toawkornot/exercises/-exercise-02)
 
 ```awk
 ## You have 2 files containing results from two similar experiments.You want to calculate the difference between the numbers in the second columns. 
@@ -63,7 +63,7 @@ awk 'BEGIN{ while (getline < ARGV[1]) {x1=$1;y1=$2; getline < ARGV[2]; printf("%
 
 ## Dissecting the code : getline command does is simple thing as it causes you to be forced in the same line. ARGV[1] amd ARG[2] gives index of argument array.
 ```
-##### Exercise 04 Easy tricks
+##### Exercise 04 [Easy tricks] (https://sites.google.com/site/toawkornot/exercises/-04-easy-tricks)
 ```awk
 ## a) print numbers from 1 to 7 i.e. produce such output
 awk 'BEGIN{ for(i=1 ;i<=7;i=i+1) print i }'
@@ -86,4 +86,6 @@ awk 'BEGIN{ for(i=1 ;i<=7;i=i+2) print i}'
 ## g) make awk script that prints such output i.e. 2 students in each group. (**)
  awk 'BEGIN{ for(i=1;i<=7;i++) print "Group"i" => Student"(i-1)*2+1", Student"(i-1)*2+2 }'
 ```
+
+##### Exercise 05 [Bioinformatics corner] (https://sites.google.com/site/toawkornot/exercises/-05-bioinformaticians-corner)
 
