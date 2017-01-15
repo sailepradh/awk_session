@@ -89,3 +89,4 @@ awk 'BEGIN{ for(i=1 ;i<=7;i=i+2) print i}'
 
 ##### Exercise 05 [Bioinformatics corner] (https://sites.google.com/site/toawkornot/exercises/-05-bioinformaticians-corner)
 
+He has linked bioinformatics stuffs from [analyzing transcriptome](http://reasoniamhere.com/2013/09/16/awk-gtf-how-to-analyze-a-transcriptome-like-a-pro-part-1/)
