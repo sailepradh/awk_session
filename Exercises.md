@@ -74,7 +74,7 @@ awk 'BEGIN{ while (getline < ARGV[1]) {x1=$1;y1=$2; getline < ARGV[2]; printf("%
 ## Dissecting the code : getline command does is simple thing as it causes you to be forced in the same line. ARGV[1] amd ARG[2] gives index of argument array.
 ```
 ##### Exercise 04 Easy tricks
-``awk
+```awk
 ## a) print numbers from 1 to 7 i.e. produce such output
 awk 'BEGIN{ for(i=1 ;i<=7;i=i+1) print i }'
 
@@ -88,5 +88,5 @@ awk 'BEGIN{ for(i=7 ;i>=1;i=i-1) print i}'
 awk 'BEGIN{ for(i=1 ;i<=7;i=i+2) print i}'
 
 ## e) print the numbers from 1 to 2 with increments of 0.1 ie
-  awk 'BEGIN{ for(i=1 ;i<=2.1;i=i+0.1) print i}'
+ awk 'BEGIN{ for(i=1 ;i<=2.1;i=i+0.1) print i}'
 ```
