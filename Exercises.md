@@ -1,4 +1,4 @@
-#### Exercise 1
+##### [Seminar exercise] (https://sites.google.com/site/toawkornot/exercises)
 
 ##### Exercise 1.1 sum of the values
 ```awk
