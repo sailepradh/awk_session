@@ -58,6 +58,35 @@ awk '/MD step/{step= $3; getline; press= $4; getline; pe= $5; getline; ke= $6; g
 awk 'BEGIN {RS=" K\n"} {print $3, $7, $13, $20, $27, $33}' md.out
 
 ```
-##### Exercise 02 Data extraction
+##### Exercise 03 Data extraction
 
+```awk
+## You have 2 files containing results from two similar experiments.You want to calculate the difference between the numbers in the second columns. 
+join -j 1 1.dat 2.dat | awk '{print $1,$2,$3,$3-$2}'
+
+## Other possible solutions
+paste 1.dat 2.dat | awk '{print $1,$2,$4,$2-$4}'
+
+awk 'ARGIND==1 {x1=$1;y1=$2; getline < ARGV[2]; printf("%g  %g  %g  %g  %g\n",x1,y1,$1,$2,y1-$2);}' 1.dat 2.dat
+
+awk 'BEGIN{ while (getline < ARGV[1]) {x1=$1;y1=$2; getline < ARGV[2]; printf("%g  %g  %g  %g  %g\n",x1,y1,$1,$2,y1-$2);}}' 1.dat 2.dat
+
+## Dissecting the code : getline command does is simple thing as it causes you to be forced in the same line. ARGV[1] amd ARG[2] gives index of argument array.
 ```
+##### Exercise 04 Easy tricks
+``awk
+## a) print numbers from 1 to 7 i.e. produce such output
+awk 'BEGIN{ for(i=1 ;i<=7;i=i+1) print i }'
+
+## b) print the same numbers on a single line i.e.
+awk 'BEGIN{ for(i=1 ;i<=7;i=i+1) printf i" "}'
+
+## c) print the numbers from 1 to 7 in reverse order
+awk 'BEGIN{ for(i=7 ;i>=1;i=i-1) print i}'
+
+## d) print every other number from 1 to 7 i.e. 
+awk 'BEGIN{ for(i=1 ;i<=7;i=i+2) print i}'
+
+## e) print the numbers from 1 to 2 with increments of 0.1 ie
+  awk 'BEGIN{ for(i=1 ;i<=2.1;i=i+0.1) print i}'
+  
