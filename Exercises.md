@@ -48,7 +48,7 @@ awk '/MD step/{step= $3; getline; press= $4; getline; pe= $5; getline; ke= $6; g
 awk 'BEGIN {RS=" K\n"} {print $3, $7, $13, $20, $27, $33}' md.out
 
 ```
-##### Exercise 03 [Data extraction] (https://sites.google.com/site/toawkornot/exercises/-exercise-02)
+##### Exercise 03 [Data manipulation] (https://sites.google.com/site/toawkornot/exercises/-exercise-02)
 
 ```awk
 ## You have 2 files containing results from two similar experiments.You want to calculate the difference between the numbers in the second columns. 
