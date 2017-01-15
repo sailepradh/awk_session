@@ -89,4 +89,4 @@ awk 'BEGIN{ for(i=1 ;i<=7;i=i+2) print i}'
 
 ## e) print the numbers from 1 to 2 with increments of 0.1 ie
   awk 'BEGIN{ for(i=1 ;i<=2.1;i=i+0.1) print i}'
-  
+```
