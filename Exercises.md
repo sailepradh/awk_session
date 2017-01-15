@@ -89,4 +89,11 @@ awk 'BEGIN{ for(i=1 ;i<=7;i=i+2) print i}'
 
 ## e) print the numbers from 1 to 2 with increments of 0.1 ie
  awk 'BEGIN{ for(i=1 ;i<=2.1;i=i+0.1) print i}'
+ 
+## f) can you add on each line the square of the number, exp(), sin() /the argument is in radians, don't worry/ 
+ awk_seminar$]  awk 'BEGIN{ for(i=1 ;i<=2.1;i=i+0.1) print i,exp(i),sin(i)}'
+ 
+## g) make awk script that prints such output i.e. 2 students in each group. (**)
+ awk 'BEGIN{ for(i=1;i<=7;i++) print "Group"i" => Student"(i-1)*2+1", Student"(i-1)*2+2 }'
 ```
+
