@@ -49,11 +49,15 @@ awk 'BEGIN {fac = 1.189} {print fac*$1,fac*$2,1.fac*$3}' coord.dat
 
 
 ##### Exercise 02 Data extraction
- ```
+ ``` awk
 ## Write an Awk script to collect the "MD temperature" in one column vs the "Md step" i.e.
 $ awk '/MD step/{step= $3} /MD Temperature:/ {print step, $5 }' md. out
 
 ## Can you tabulate all values against the "MD step"
 awk '/MD step/{step= $3; getline; press= $4; getline; pe= $5; getline; ke= $6; getline; te= $6; getline; t=$5; print step,press,pe,ke,te,t} ' Md.out 
 awk 'BEGIN {RS=" K\n"} {print $3, $7, $13, $20, $27, $33}' md.out
+
+```
+##### Exercise 02 Data extraction
+
 ```
